@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body{
+        background-image: url("bg.jpg");
+    }
+    div {
+
+        margin-top: 4rem;
+        margin-left: 4rem;
+
+        height: 210px;
+        width: 340px;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 15px;
+        /* border: 3px solid black; */
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+
+        /* width: 330px; */
+        background-color: transparent;
+        /* height: 400px; */
+
+    }
+
+    input {
+        text-decoration: none;
+        width: 25%;
+        /* padding: 5rem; */
+        margin-bottom: 1.5rem;
+        outline: none;
+        border: none;
+        /* border-bottom: 2px solid black; */
+
+    }
+
+    button {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: 3.s ease-in-out;
+    }
+
+</style>
+
+<body>
+    <!-- <h1>number sign checker</h1>
+    <p>enter a number: <input type="text" id="numcheck" onclick="numchecker"></p>
+    <p id="demo"></p> -->
+    <div>
+<h1>number sign checker</h1>
+
+        <form>
+            Enter a number: <input type="text" name="" id="data" />
+            <button onclick="check()">check</button>
+        </form>
+        <h1 id="result"></h1>
+    </div>
+
+    <script type="text/javascript">
+        function check() {
+            var value = document.getElementById('data').value;
+            if (value > 0) {
+                res = '${value} is positive number';
+            }
+            else if (value < 0) {
+                res = '${value} is negative number';
+            }
+            else if (value == 0) {
+                res = '${value} is zero';
+            }
+            document.getElementById('result').innerText = res;
+        }  
+    </script>
+
+</body>
+
+</html>
